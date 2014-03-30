@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>js-sequence-diagrams example</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="libs/js/underscore-min.js"></script>
+        <script src="libs/js/raphael-min.js"></script>
+        <script src="libs/js/sequence-diagram-min.js"></script>
+    </head>
+<body>
+    <pre id="uml-left" style="width:50%; float:left;">
+        Andrew->China: Says Hello
+Note right of China: China thinks\nabout it
+China-->Andrew: How are you?
+Andrew->>China: I am good thanks!
+    </pre>
+    <pre id="uml-right" style="width:50%; float:left;">
+        Andrew->China: Says Hello
+Note right of China: China thinks\nabout it
+China-->Andrew: How are you?
+    </pre>
+    <div id="diagram-left" style="width:50%; float:left; clear: both;"></div>
+    <div id="diagram-right" style="width:50%; float:left;"></div>
+    <script>
+      var diagram = Diagram.parse(document.getElementById('uml-left').innerText);
+      diagram.drawSVG("diagram-left", {theme: 'simple'});
+
+      var diagram = Diagram.parse(document.getElementById('uml-right').innerText);
+      diagram.drawSVG("diagram-right", {theme: 'simple'});
+    </script>
+</body>
+</html>
