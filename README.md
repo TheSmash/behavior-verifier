@@ -7,8 +7,8 @@ natively integrated with Plantuml
 
 usage guide:
 
-1. run mvn clean install
-2. export JAVA_TOOL_OPTIONS=-javaagent:target/appreview.jar[packages=${packages},listeners:${comaSeparatedListeners},reporters:${commaSeparatedReporters},reportDir:${umlReportPath}]
+1. run `mvn clean install\
+2. then `export JAVA_TOOL_OPTIONS=-javaagent:target/appreview.jar[packages=${packages},listeners:${comaSeparatedListeners},reporters:${commaSeparatedReporters},reportDir:${umlReportPath}]`
 
 or simply run `java -javaagent:... -jar xxx.jar` 
 
