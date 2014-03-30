@@ -10,7 +10,7 @@ usage guide:
 1. run mvn clean install
 2. export JAVA_TOOL_OPTIONS=-javaagent:target/appreview.jar[listeners:${comaSeparatedListeners},reporters:${commaSeparatedReporters},reportDir:${umlReportPath}]
 
-or simple java -javaagent:... -jar xxx.jar 
+or simply run `java -javaagent:... -jar xxx.jar` 
 
 
 provided listener: com.smash.revolance.appreview.agent.PlantUmlEventListener
