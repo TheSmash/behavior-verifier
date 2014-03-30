@@ -7,7 +7,7 @@ native support of PlantUml
 
 usage guide:
 
- run `mvn clean install\
+ run `mvn clean install`
  then `export JAVA_TOOL_OPTIONS=-javaagent:target/appreview.jar[packages=${packages},listeners:${comaSeparatedListeners},reporters:${commaSeparatedReporters},reportDir:${umlReportPath}]`
 
 or simply run `java -javaagent:... -jar xxx.jar` 
