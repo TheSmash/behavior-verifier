@@ -8,10 +8,11 @@ natively integrated with Plantuml
 usage guide:
 
 1. run mvn clean install
-2. export JAVA_TOOL_OPTIONS=-javaagent:target/appreview.jar[listeners:${comaSeparatedListeners},reporters:${commaSeparatedReporters},reportDir:${umlReportPath}]
+2. export JAVA_TOOL_OPTIONS=-javaagent:target/appreview.jar[packages=${packages},listeners:${comaSeparatedListeners},reporters:${commaSeparatedReporters},reportDir:${umlReportPath}]
 
 or simply run `java -javaagent:... -jar xxx.jar` 
 
+packages is the comma separated list of packages from which the classe methods should be instrumented
 
 provided listener: com.smash.revolance.appreview.agent.PlantUmlEventListener
 provided reporter: com.smash.revolance.appreview.agent.PlantUmlEventListener
